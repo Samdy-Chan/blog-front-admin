@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+    // "allowImportingTsExtensions": true,  // ts v3.8 版本后已废弃该项，开启报错
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+
+    /* 以下自己加 */
+    "sourceMap": true, 
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "#/*": [
+        "./src/ts/*"
+      ]
+    },
+    "noImplicitAny": false,
+    "allowJs": true,
+  },
+  
+  // "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/vite.env.d.ts"],  // 原来的
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx","src/**/*.vue", "src/vite.env.d.ts"],  // 自己加 js、jsx
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
